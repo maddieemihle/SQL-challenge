@@ -8,7 +8,9 @@ In this assignment, I was tasked with inspecting CSV files and sketching out dat
 ## Challenge 
 
 ### Part 1: Data Modeling
-The CSV files given were inspected and then formatted in a physical schema text file. This was then used to sketch an Entity Relationship Diagram table using the took [QuickDBD](https://app.quickdatabasediagrams.com/#/). All data was uploaded to pgAdmin to engineer into tables.
+The CSV files given were inspected and then formatted in a physical schema text file. This was then used to sketch an Entity Relationship Diagram table using the took [QuickDBD](https://app.quickdatabasediagrams.com/#/). Like to schema here: [Employee ERD]( https://app.quickdatabasediagrams.com/#/d/ad16ga)
+
+All data was uploaded to pgAdmin to engineer into tables.
 
 ### Part 2: Data Engineering 
 Using the provided information, a table schema was created for each of the six CSV files. Data types, Primary Keys, Foreign Keys, and other constraints were added. Next, after the tables were properly created, each CSV file was imported to the corresponding SQL table. 
@@ -16,7 +18,7 @@ Using the provided information, a table schema was created for each of the six C
 ### Part 3: Data Analysis 
 For the data analysis part, each section was broken down into eight parts. 
 
-    1. List the employee number, first name, last name, sex, and salary of each employee.
+    1. List the employee number, last name, first name, sex, and salary of each employee.
 
     2. List the first name, last name, and hire date for the employees who were hired in 1986.
 

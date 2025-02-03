@@ -1,36 +1,36 @@
-# DB Physical schema diagram txt
+# DB Physical Schema Diagram Text
 
-employees
-- 
-emp_no PK INT
-emp_title_id FK INT
+Departments
+-----------
+dept_no VARCHAR PK 
+dept_name VARCHAR 
+
+Employees
+---------
+emp_no INT PK 
+emp_title_id VARCHAR
 birth_date DATE 
 first_name VARCHAR
 last_name VARCHAR
 sex VARCHAR(1)
 hire_date DATE 
 
-departments
--
-dept_no PK VARCHAR
-dept_name VARCHAR 
+Dept_Employee
+--------------------
+emp_no INT PK FK >- Employees.emp_no
+dept_no VARCHAR PK FK >- Departments.dept_no
 
-titles
--
-title_id INT FK >- employees.emp_title_id
+Dept_Manager
+------------------
+dept_no VARCHAR PK FK >- Departments.dept_no
+emp_no INT PK FK >- Employees.emp_no
+
+Salaries
+--------
+emp_no INT PK FK >- Employees.emp_no
+salary VARCHAR
+
+Titles
+------
+title_id VARCHAR FK - Employees.emp_title_id
 title VARCHAR
-
-dept_employee
--
-emp_no INT FK - employees.emp_no
-dept_no VARCHAR FK - departments.dept_no
-
-dept_manger
--
-dept_no VARCHAR FK >- departments.dept_no
-emp_no INT FK >- employees.emp_no
-
-salaries
--
-emp_no INT FK >- employees.emp_no
-salary MONEY
